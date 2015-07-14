@@ -150,15 +150,15 @@ function getProfileData(){
         if(info.photo){
             $('img').attr('src', info.photo);
         }
+        delete info.photo;
 
         if($.isEmptyObject(info)){
             getCities(country.val());
         }
         else{
             getCities(info['country'], info);
-
-            setDisabled(true);
         }
+        setDisabled(true);
     });
 }
 

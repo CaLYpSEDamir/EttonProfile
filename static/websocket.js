@@ -1,7 +1,5 @@
 
-
 var ws = new WebSocket("ws://127.0.0.1:8888/socket");
-console.log(ws);
 
 ws.onopen = function(){
    console.log('onopen');

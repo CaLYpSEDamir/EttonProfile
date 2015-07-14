@@ -16,7 +16,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <h2 class="text-center login-title">Регистрация</h2>
-                        <form class="form-signin" id="login_form" action="{{reg_url}}" method="post">
+                        <form class="form-signin" id="regi_form" action="{{reg_url}}" method="post">
                             <div class="form-group">
                                 <input type="text" name="login" class="form-control" placeholder="Логин" required autofocus>
                             </div>
@@ -41,20 +41,19 @@
 
         <script>
             function registration(){
-                var f = $('#login_form'),
-                    validator = f.data('validator');
+                var f = $('#regi_form');
                 if(!f.valid()){
                     return;
                 }
+
+                var validator = f.data('validator');
                 if($('[name="password"]').val() != $('[name="confirm"]').val()){
                     validator.showErrors({'error': 'Не совпадение паролей'});
                     return;
                 }
                 f.submit();
             }
-
-    </script>
-
+        </script>
 
     </body>
 
